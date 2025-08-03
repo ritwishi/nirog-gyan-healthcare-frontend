@@ -1,0 +1,151 @@
+.doctor-profile {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--primary-600);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.profile-header {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.doctor-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-100);
+}
+
+.doctor-details h1 {
+  margin: 0 0 0.5rem 0;
+  color: var(--gray-900);
+  font-size: 2rem;
+}
+
+.specialization {
+  color: var(--primary-600);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.experience,
+.fee {
+  color: var(--gray-600);
+  margin: 0.25rem 0;
+}
+
+.availability-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.availability-badge.available {
+  background: var(--success-50);
+  color: var(--success-700);
+  border: 1px solid var(--success-200);
+}
+
+.profile-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.about-section,
+.schedule-section {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-section h2,
+.schedule-section h2 {
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.schedule-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.day-schedule h3 {
+  color: var(--primary-600);
+  margin-bottom: 0.5rem;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.time-slot {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.no-schedule {
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+.booking-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.error-container {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .doctor-details h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,247 @@
+.doctor-card {
+  background: white;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--gray-200);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-200);
+}
+
+.doctor-card-header {
+  padding: var(--spacing-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+}
+
+.doctor-image {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.doctor-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-100);
+}
+
+.availability-indicator {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.availability-indicator.status-available {
+  background: var(--success-500);
+}
+
+.availability-indicator.status-booked {
+  background: var(--error-500);
+}
+
+.availability-indicator.status-leave {
+  background: var(--warning-500);
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.doctor-basic-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.doctor-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 var(--spacing-1) 0;
+  line-height: 1.3;
+}
+
+.doctor-specialty {
+  color: var(--primary-600);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.doctor-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: var(--warning-500);
+}
+
+.star.empty {
+  color: var(--gray-300);
+}
+
+.rating-text {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+}
+
+.doctor-card-body {
+  padding: 0 var(--spacing-6) var(--spacing-6);
+  flex: 1;
+}
+
+.doctor-details {
+  margin-bottom: var(--spacing-4);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.detail-value {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.detail-value.fee {
+  color: var(--success-600);
+  font-weight: 600;
+}
+
+.availability-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  margin-bottom: var(--spacing-4);
+}
+
+.availability-status.status-available {
+  background: var(--success-50);
+  color: var(--success-700);
+  border: 1px solid var(--success-200);
+}
+
+.availability-status.status-booked {
+  background: var(--error-50);
+  color: var(--error-700);
+  border: 1px solid var(--error-200);
+}
+
+.availability-status.status-leave {
+  background: var(--warning-50);
+  color: var(--warning-700);
+  border: 1px solid var(--warning-200);
+}
+
+.status-icon {
+  font-size: 12px;
+}
+
+.doctor-card-footer {
+  padding: var(--spacing-4) var(--spacing-6);
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.doctor-card-footer .btn {
+  flex: 1;
+  text-align: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-outline {
+  background: white;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+}
+
+.btn-outline:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.btn-primary {
+  background: var(--primary-600);
+  color: white;
+  border: 1px solid var(--primary-600);
+}
+
+.btn-primary:hover {
+  background: var(--primary-700);
+  border-color: var(--primary-700);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .doctor-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-3);
+  }
+  
+  .doctor-image {
+    align-self: center;
+  }
+  
+  .doctor-card-footer {
+    flex-direction: column;
+  }
+  
+  .doctor-card-footer .btn {
+    width: 100%;
+  }
+}

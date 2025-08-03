@@ -1,0 +1,133 @@
+.confirmation-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.confirmation-card {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-xl);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-card h1 {
+  color: var(--success-600);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.success-message {
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.appointment-details {
+  text-align: left;
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  background: var(--gray-50);
+}
+
+.appointment-details h2 {
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row strong {
+  color: var(--gray-700);
+}
+
+.status-confirmed {
+  color: var(--success-600);
+  font-weight: 600;
+}
+
+.important-notes {
+  text-align: left;
+  margin-bottom: 2rem;
+  background: var(--warning-50);
+  border: 1px solid var(--warning-200);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.important-notes h3 {
+  color: var(--warning-800);
+  margin-bottom: 1rem;
+}
+
+.important-notes ul {
+  color: var(--warning-800);
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.important-notes li {
+  margin-bottom: 0.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.action-buttons .btn {
+  padding: var(--spacing-3) var(--spacing-6);
+  font-weight: 600;
+}
+
+.error-message {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.error-message h2 {
+  color: var(--error-600);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

@@ -1,0 +1,124 @@
+.homepage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-section {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-8);
+  border: 1px solid var(--gray-200);
+}
+
+.search-container {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: var(--spacing-3);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-400);
+}
+
+.specialization-select {
+  min-width: 200px;
+  padding: var(--spacing-3);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-base);
+  background: white;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.specialization-select:focus {
+  outline: none;
+  border-color: var(--primary-400);
+}
+
+.results-section h2 {
+  color: var(--gray-800);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: var(--gray-600);
+}
+
+.loading-container .spinner {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .specialization-select {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+}
