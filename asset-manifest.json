@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nirog-gyan-healthcare-frontend/static/css/main.c0f80304.css",
+    "main.js": "/nirog-gyan-healthcare-frontend/static/js/main.e6587150.js",
+    "index.html": "/nirog-gyan-healthcare-frontend/index.html",
+    "main.c0f80304.css.map": "/nirog-gyan-healthcare-frontend/static/css/main.c0f80304.css.map",
+    "main.e6587150.js.map": "/nirog-gyan-healthcare-frontend/static/js/main.e6587150.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0f80304.css",
+    "static/js/main.e6587150.js"
+  ]
+}
